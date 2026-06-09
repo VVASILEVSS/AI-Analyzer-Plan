@@ -1,0 +1,436 @@
+{
+  "232f29b9018d634b96c3cbb53d684f3cc38b6037b48b45e548c8f989b6add9e7": {
+    "signal": {
+      "signal": "HOLD",
+      "confidence": 0.85,
+      "pair": "BTC/USDT",
+      "timeframe": "1h",
+      "reasons": [
+        "The ML Filter has a PASS verdict with a probability of 1.00, indicating strong support for the current market trend.",
+        "However, the BTC/USDT pair is currently in a consolidation phase as indicated by the lack of significant movement over the last hour."
+      ],
+      "risks": [
+        "The ML Filter's high confidence might be misleading if there are hidden signals or anomalies not captured by the model.",
+        "Consolidation phases can lead to volatility, which could potentially impact the long-term trend in either direction."
+      ],
+      "model_used": "qwen2.5:3b",
+      "timestamp": "2026-06-08T13:41:06.935904+00:00",
+      "regime": "RANGE",
+      "ml_verdict": "PASS",
+      "ml_probability": 1.0,
+      "sha256": "e3dfba8b57cdab2b953de539b9dab6d114c7baaff8b6c9685dd3d26cbc0738d9",
+      "pipeline": {
+        "elapsed": 7.53,
+        "ml_filter": {
+          "verdict": "PASS",
+          "probability": 1.0,
+          "blocked": false,
+          "phase": "unloaded"
+        },
+        "regime": {
+          "regime": "RANGE",
+          "confidence": 0.7333,
+          "indicators": {
+            "price_range_pct": 0,
+            "body_ratio": 0.0,
+            "candle_direction": 0,
+            "volume_ratio": 0.0,
+            "rsi": 50,
+            "adx": 0,
+            "bb_width": 0,
+            "atr": 0,
+            "ema_9": 0,
+            "ema_21": 0,
+            "ema_50": 0,
+            "macd_hist": 0,
+            "funding_rate": 0,
+            "oi_change_pct": 0,
+            "price_vs_ema21": 0,
+            "trend_alignment": 0
+          }
+        },
+        "llm_elapsed": 7.511579751968384,
+        "from_cache": false
+      }
+    },
+    "cached_at": 1780926066.93607
+  },
+  "43fe5f318f057bb3c41b08c0fe0620f681fc35c1c3bc07e19bcb486b6a1a4500": {
+    "signal": {
+      "signal": "HOLD",
+      "confidence": 0.75,
+      "pair": "BTC/USDT",
+      "timeframe": "4h",
+      "reasons": [
+        "The ML Filter has a PASS verdict with a probability of 1.00, indicating strong support for the current market conditions.",
+        "However, the BTC/USDT (4h) chart shows recent price oscillations around the $28,000 level without clear breakout signals on either side.",
+        "There is no significant technical indicator such as a moving average crossover or divergence that would strongly suggest a BUY or SELL signal."
+      ],
+      "risks": [
+        "The current market conditions may be too volatile to take decisive action based solely on the ML Filter's PASS verdict.",
+        "A HOLD position allows for monitoring of further price movements and potential shifts in market sentiment or technical indicators."
+      ],
+      "model_used": "qwen2.5:3b",
+      "timestamp": "2026-06-08T14:21:39.254735+00:00",
+      "regime": "RANGE",
+      "ml_verdict": "PASS",
+      "ml_probability": 1.0,
+      "sha256": "6d54e705fc962cec56aea80fcab4c357107a2175b4484e33965e76de0fcbe945",
+      "pipeline": {
+        "elapsed": 8.69,
+        "ml_filter": {
+          "verdict": "PASS",
+          "probability": 1.0,
+          "blocked": false,
+          "phase": "unloaded"
+        },
+        "regime": {
+          "regime": "RANGE",
+          "confidence": 0.7333,
+          "indicators": {
+            "price_range_pct": 0,
+            "body_ratio": 0.0,
+            "candle_direction": 0,
+            "volume_ratio": 0.0,
+            "rsi": 50,
+            "adx": 0,
+            "bb_width": 0,
+            "atr": 0,
+            "ema_9": 0,
+            "ema_21": 0,
+            "ema_50": 0,
+            "macd_hist": 0,
+            "funding_rate": 0,
+            "oi_change_pct": 0,
+            "price_vs_ema21": 0,
+            "trend_alignment": 0
+          }
+        },
+        "llm_elapsed": 8.682234764099121,
+        "from_cache": false
+      }
+    },
+    "cached_at": 1780928499.2548935
+  },
+  "65fe7b05dcacef7db6234de8b990cd1239a1e86e8ff57e733c9bbe10ae6119dd": {
+    "signal": {
+      "signal": "HOLD",
+      "confidence": 0.85,
+      "pair": "BTC/USDT",
+      "timeframe": "15m",
+      "reasons": [
+        "ML Filter PASS with probability of 1.00, indicating strong support for the current position.",
+        "No significant recent price movements or anomalies in the last 15m timeframe."
+      ],
+      "risks": [
+        "The ML Filter's high confidence level might not be fully reliable without more historical data to validate its performance.",
+        "Market conditions can change rapidly, and this analysis is based on a short-term (15m) perspective."
+      ],
+      "model_used": "qwen2.5:3b",
+      "timestamp": "2026-06-08T14:22:27.242725+00:00",
+      "regime": "RANGE",
+      "ml_verdict": "PASS",
+      "ml_probability": 1.0,
+      "sha256": "4d8c88d80a1fd98ccb0faad6f8a543abb53c174156d7cc7502b74849c0398d59"
+    },
+    "cached_at": 1780928547.2428496
+  },
+  "9c8f004c09584f15f2e3a7abb07e2b37e6e3fd4dfc123b119c1790c2cca7309a": {
+    "signal": {
+      "signal": "HOLD",
+      "confidence": 0.7,
+      "pair": "BTC/USDT",
+      "timeframe": "1h",
+      "reasons": [
+        "Цена находится в диапазоне (RANGE)",
+        "RSI(14) показывает нейтральную зону",
+        "Текущий тренд не указывает на сильное движение"
+      ],
+      "risks": [
+        "Низкая вероятность движения вверх или вниз",
+        "Отсутствие ясного тренда может привести к снижению цены"
+      ],
+      "model_used": "qwen_qwen2.5-vl-7b-instruct",
+      "timestamp": "2026-06-09T07:36:16.664981+00:00",
+      "regime": "RANGE",
+      "ml_verdict": "PASS",
+      "ml_probability": 1.0,
+      "sha256": "ba5c90bbac966cd883edaa22ab86f582c1af1cbdc3e1cc6871a2cc98faddab1d",
+      "pipeline": {
+        "elapsed": 5.73,
+        "market_data_points": 50,
+        "ml_filter": {
+          "verdict": "PASS",
+          "probability": 1.0,
+          "blocked": false,
+          "phase": "unloaded"
+        },
+        "regime": {
+          "regime": "RANGE",
+          "confidence": 0.7333,
+          "indicators": {
+            "price_range_pct": 0,
+            "body_ratio": 0.0,
+            "candle_direction": 0,
+            "volume_ratio": 0.0,
+            "rsi": 50,
+            "adx": 0,
+            "bb_width": 0,
+            "atr": 0,
+            "ema_9": 0,
+            "ema_21": 0,
+            "ema_50": 0,
+            "macd_hist": 0,
+            "funding_rate": 0,
+            "oi_change_pct": 0,
+            "price_vs_ema21": 0,
+            "trend_alignment": 0
+          }
+        },
+        "llm_elapsed": 3.5396311283111572,
+        "from_cache": false
+      }
+    },
+    "cached_at": 1780990576.6650743
+  },
+  "f8f3d758a187dabea12b0e9ceedc3292b098991538f198ece473bdd4e2ed8951": {
+    "signal": {
+      "signal": "HOLD",
+      "confidence": 0.7,
+      "pair": "BTC/USDT",
+      "timeframe": "15m",
+      "reasons": [
+        "Цена находится в диапазоне, что указывает на отсутствие ясного тренда",
+        "RSI(14) показывает нейтральную зону (36.3)",
+        "Объем торгов 24 часов составляет 24343.52, что не является высоким"
+      ],
+      "risks": [
+        "Цена может продолжить движение в диапазоне",
+        "RSI(14) может перейти в зону перекупленности"
+      ],
+      "model_used": "qwen_qwen2.5-vl-7b-instruct",
+      "timestamp": "2026-06-09T08:07:10.230175+00:00",
+      "regime": "RANGE",
+      "ml_verdict": "PASS",
+      "ml_probability": 1.0,
+      "sha256": "46aa5849d4ac0e32d324f2c6aeb6903b884c267069577dcc3a42fd430e9b52eb"
+    },
+    "cached_at": 1780992430.2302473
+  },
+  "99918e4b4ccdd147ea82a7ef7c3e732b4ea99f3bb0a57b424b6b92250a44520e": {
+    "signal": {
+      "signal": "HOLD",
+      "confidence": 0.5,
+      "pair": "BTC/USDT",
+      "timeframe": "1d",
+      "reasons": [
+        "No market data provided, so no actionable signal can be generated."
+      ],
+      "risks": [
+        "Lack of market data may lead to missed opportunities.",
+        "Market conditions could change rapidly without prior notice."
+      ],
+      "model_used": "qwen_qwen2.5-vl-7b-instruct",
+      "timestamp": "2026-06-09T07:22:14.178561+00:00",
+      "regime": "RANGE",
+      "ml_verdict": "PASS",
+      "ml_probability": 1.0,
+      "sha256": "7211f9010b785fa06fc410949cb38271c76ab1832ff23fa5faf70ba4db03beaf"
+    },
+    "cached_at": 1780989734.1786296
+  },
+  "aa13256f09c7606f9ffefdf8dcde7bb991f8237e952055c0453e8a8a8221fb85": {
+    "signal": {
+      "signal": "HOLD",
+      "confidence": 0.5,
+      "pair": "XAU/USDT",
+      "timeframe": "1h",
+      "reasons": [
+        "Недостаточно данных для анализа",
+        "Отсутствие тренда и волатильности"
+      ],
+      "risks": [
+        "Низкая вероятность движения рынка",
+        "Отсутствие поддержки и сопротивления"
+      ],
+      "model_used": "qwen_qwen2.5-vl-7b-instruct",
+      "timestamp": "2026-06-09T07:41:02.043109+00:00",
+      "regime": "RANGE",
+      "ml_verdict": "PASS",
+      "ml_probability": 1.0,
+      "sha256": "7494fc5d70b09d2152c780589a4bfc201b45d7c5365e16a858be89597616b297",
+      "pipeline": {
+        "elapsed": 5.06,
+        "market_data_points": 0,
+        "ml_filter": {
+          "verdict": "PASS",
+          "probability": 1.0,
+          "blocked": false,
+          "phase": "unloaded"
+        },
+        "regime": {
+          "regime": "RANGE",
+          "confidence": 0.7333,
+          "indicators": {
+            "price_range_pct": 0,
+            "body_ratio": 0.0,
+            "candle_direction": 0,
+            "volume_ratio": 0.0,
+            "rsi": 50,
+            "adx": 0,
+            "bb_width": 0,
+            "atr": 0,
+            "ema_9": 0,
+            "ema_21": 0,
+            "ema_50": 0,
+            "macd_hist": 0,
+            "funding_rate": 0,
+            "oi_change_pct": 0,
+            "price_vs_ema21": 0,
+            "trend_alignment": 0
+          }
+        },
+        "llm_elapsed": 2.8907053470611572,
+        "from_cache": false
+      }
+    },
+    "cached_at": 1780990862.0431862
+  },
+  "21e1bc6a91d5a3f4ca2d91d037bc5b1f6954bb3ba125d2a027498a13f81609f9": {
+    "signal": {
+      "signal": "HOLD",
+      "confidence": 0.5,
+      "pair": "XAU/USDT",
+      "timeframe": "15m",
+      "reasons": [
+        "Недостаточно данных для анализа",
+        "Отсутствие тренда"
+      ],
+      "risks": [
+        "Высокая волатильность рынка"
+      ],
+      "model_used": "qwen_qwen2.5-vl-7b-instruct",
+      "timestamp": "2026-06-09T07:41:21.092193+00:00",
+      "regime": "RANGE",
+      "ml_verdict": "PASS",
+      "ml_probability": 1.0,
+      "sha256": "5e0d5b35885cdbabd2a4a63e1aa9826cb0ef4e6bcd79b9f691da0fe79ebf4ea3",
+      "pipeline": {
+        "elapsed": 4.73,
+        "market_data_points": 0,
+        "ml_filter": {
+          "verdict": "PASS",
+          "probability": 1.0,
+          "blocked": false,
+          "phase": "unloaded"
+        },
+        "regime": {
+          "regime": "RANGE",
+          "confidence": 0.7333,
+          "indicators": {
+            "price_range_pct": 0,
+            "body_ratio": 0.0,
+            "candle_direction": 0,
+            "volume_ratio": 0.0,
+            "rsi": 50,
+            "adx": 0,
+            "bb_width": 0,
+            "atr": 0,
+            "ema_9": 0,
+            "ema_21": 0,
+            "ema_50": 0,
+            "macd_hist": 0,
+            "funding_rate": 0,
+            "oi_change_pct": 0,
+            "price_vs_ema21": 0,
+            "trend_alignment": 0
+          }
+        },
+        "llm_elapsed": 2.642394542694092,
+        "from_cache": false
+      }
+    },
+    "cached_at": 1780990881.092362
+  },
+  "35615df252e4617ca2f35124a9919080daa52dc6dc04cd1bb7173d2faf83d63a": {
+    "signal": {
+      "signal": "HOLD",
+      "confidence": 0.5,
+      "pair": "ETH/USDT",
+      "timeframe": "15m",
+      "reasons": [
+        "RSI(14) находится в области перекупленности",
+        "Тренд рынка - RANGE, что указывает на отсутствие ясного направления"
+      ],
+      "risks": [
+        "Потенциальная перекупленность может привести к снижению цены",
+        "Отсутствие четкого тренда увеличивает риск"
+      ],
+      "model_used": "qwen_qwen2.5-vl-7b-instruct",
+      "timestamp": "2026-06-09T07:50:31.705226+00:00",
+      "regime": "RANGE",
+      "ml_verdict": "PASS",
+      "ml_probability": 1.0,
+      "sha256": "caeef5a1e568a9f308043cbef20d63078b8d5c7963743870032eedea14ceb7da",
+      "pipeline": {
+        "elapsed": 5.78,
+        "market_data_points": 50,
+        "ml_filter": {
+          "verdict": "PASS",
+          "probability": 1.0,
+          "blocked": false,
+          "phase": "unloaded"
+        },
+        "regime": {
+          "regime": "RANGE",
+          "confidence": 0.7333,
+          "indicators": {
+            "price_range_pct": 0,
+            "body_ratio": 0.0,
+            "candle_direction": 0,
+            "volume_ratio": 0.0,
+            "rsi": 50,
+            "adx": 0,
+            "bb_width": 0,
+            "atr": 0,
+            "ema_9": 0,
+            "ema_21": 0,
+            "ema_50": 0,
+            "macd_hist": 0,
+            "funding_rate": 0,
+            "oi_change_pct": 0,
+            "price_vs_ema21": 0,
+            "trend_alignment": 0
+          }
+        },
+        "llm_elapsed": 3.2840163707733154,
+        "from_cache": false
+      }
+    },
+    "cached_at": 1780991431.7052948
+  },
+  "76dfe4fcffd48ced27c9a08d1dd0f701da3a17fe79eda0d26477629eb78b05ef": {
+    "signal": {
+      "signal": "HOLD",
+      "confidence": 0.5,
+      "pair": "XAUT/USDT",
+      "timeframe": "1h",
+      "reasons": [
+        "Цена находится в диапазоне",
+        "RSI(14) показывает нейтральную зону",
+        "Тренд не определен"
+      ],
+      "risks": [
+        "Волатильность рынка низкая, что может привести к медленному движению цены",
+        "Отношение объёма указывает на слабую активность"
+      ],
+      "model_used": "qwen_qwen2.5-vl-7b-instruct",
+      "timestamp": "2026-06-09T08:31:10.884145+00:00",
+      "regime": "RANGE",
+      "ml_verdict": "PASS",
+      "ml_probability": 1.0,
+      "sha256": "64f8db399a86f96c0057df04816ab52c8c83bb044931d4f5ee28ebec128d0c08"
+    },
+    "cached_at": 1780993870.8842309
+  }
+}

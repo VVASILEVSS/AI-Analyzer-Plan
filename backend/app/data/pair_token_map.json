@@ -1,0 +1,23 @@
+{
+  "BTC/USDT": {
+    "token_address": "0x2260FAC5E55C2CB4734B44B0F45D5E3D4C4B9bC0",
+    "exchange": "binance",
+    "min_confidence": 0.6,
+    "liquidation_levels": [66000, 68000, 72000, 75000],
+    "description": "Bitcoin / US Tether"
+  },
+  "ETH/USDT": {
+    "token_address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+    "exchange": "binance",
+    "min_confidence": 0.6,
+    "liquidation_levels": [3200, 3500, 3800, 4100],
+    "description": "Ethereum / US Tether"
+  },
+  "SOL/USDT": {
+    "token_address": "So11111111111111111111111111111111111111112",
+    "exchange": "binance",
+    "min_confidence": 0.65,
+    "liquidation_levels": [130, 150, 170, 200],
+    "description": "Solana / US Tether"
+  }
+}

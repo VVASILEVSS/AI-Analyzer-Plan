@@ -1,0 +1,20 @@
+[
+  {
+    "name": "fast_signal",
+    "description": "Quick signal analysis — single model, minimal prompt",
+    "system": "You are a crypto trading analyst. Be concise and specific.",
+    "template": "Analyze {pair} ({timeframe}) and give a trading signal.\n\nMarket data:\n{market_data}\n\nML Filter: {ml_verdict}\n\nRespond with JSON: {\"signal\": \"BUY\"|\"SELL\"|\"HOLD\", \"confidence\": 0.0-1.0, \"reasons\": [...], \"risks\": [...]}"
+  },
+  {
+    "name": "detailed_signal",
+    "description": "Detailed analysis with multiple reasons and risk assessment",
+    "system": "You are an expert crypto trading analyst. Provide detailed analysis with specific data references.",
+    "template": "Perform detailed analysis of {pair} ({timeframe}).\n\nMarket data:\n{market_data}\n\nML Filter verdict: {ml_verdict} (probability: {ml_probability:.2f})\n\nProvide a comprehensive trading signal with:\n- Clear BUY/SELL/HOLD recommendation\n- At least 3 specific reasons with data references\n- At least 2 risk factors\n- Confidence score based on signal strength\n\nRespond with JSON: {\"signal\": \"BUY\"|\"SELL\"|\"HOLD\", \"confidence\": 0.0-1.0, \"reasons\": [...], \"risks\": [...]}"
+  },
+  {
+    "name": "regime_aware",
+    "description": "Analysis that considers current market regime",
+    "system": "You are a crypto trading analyst specializing in regime-based strategies. Adapt your analysis to the current market phase.",
+    "template": "Analyze {pair} ({timeframe}) considering the detected market regime: {regime}.\n\nMarket data:\n{market_data}\n\nRegime: {regime} (confidence: {regime_confidence:.2f})\nML Filter: {ml_verdict}\n\nAdapt your signal to the current regime. In RANGE, prefer HOLD. In TREND, follow direction. In ACCUMULATION, look for breakout. In PANIC, be extremely cautious.\n\nRespond with JSON: {\"signal\": \"BUY\"|\"SELL\"|\"HOLD\", \"confidence\": 0.0-1.0, \"reasons\": [...], \"risks\": [...]}"
+  }
+]

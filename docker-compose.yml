@@ -1,0 +1,64 @@
+version: "3.8"
+
+services:
+  # Python FastAPI Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ai-analyzer-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/logs:/app/logs
+      - ./backend/models:/app/models
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - DEBUG=true
+      - ML_FILTER_ENABLED=true
+      - ML_FILTER_PHASE=log_only
+      - CACHE_ENABLED=true
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import httpx; httpx.get('http://localhost:8000/api/v1/health').raise_for_status()"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  # Next.js Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: ai-analyzer-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+
+  # Ollama (optional — user may run Ollama natively on Windows)
+  # Uncomment if running in Docker only
+  # ollama:
+  #   image: ollama/ollama:latest
+  #   container_name: ai-analyzer-ollama
+  #   ports:
+  #     - "11434:11434"
+  #   volumes:
+  #     - ollama_data:/root/.ollama
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - driver: nvidia
+  #             count: 1
+  #             capabilities: [gpu]
+  #   restart: unless-stopped
+
+# volumes:
+#   ollama_data:

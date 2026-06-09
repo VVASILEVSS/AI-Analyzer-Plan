@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.env
+node_modules/
+.next/
+*.log
+logs/
+models/*.pkl
+backend/logs/
+backend/models/
+frontend/node_modules/
+frontend/.next/
+deploy_*.py
+*.tar.gz
