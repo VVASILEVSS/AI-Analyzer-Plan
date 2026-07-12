@@ -40,6 +40,9 @@ OLLAMA_TIMEOUT: int = int(os.getenv("OLLAMA_TIMEOUT", "120"))  # seconds
 OLLAMA_DEFAULT_MODEL: str = os.getenv(
     "OLLAMA_DEFAULT_MODEL", "qwen_qwen2.5-vl-7b-instruct"
 )
+# API key for cloud OpenAI-compatible endpoints (Alibaba GLM, OpenRouter, etc.)
+# When empty — works with local Ollama/LM Studio without auth.
+OLLAMA_API_KEY: str = os.getenv("OLLAMA_API_KEY", "")
 
 # ── GPU / VRAM ──────────────────────────────────────────────
 # "auto" tries to detect via nvidia-smi; fallback to MANUAL_VRAM_GB

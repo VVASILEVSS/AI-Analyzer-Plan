@@ -10,6 +10,7 @@ from typing import Optional
 import httpx
 
 from app.core.config import (
+    OLLAMA_API_KEY,
     OLLAMA_BASE_URL,
     OLLAMA_DEFAULT_MODEL,
     OLLAMA_TIMEOUT,
@@ -26,13 +27,23 @@ class OllamaService:
         self.base_url = base_url.rstrip("/")
         self.default_model = OLLAMA_DEFAULT_MODEL
         self.timeout = OLLAMA_TIMEOUT
+        self.api_key = OLLAMA_API_KEY
+
+    def _headers(self) -> dict:
+        """Build headers. Adds Authorization only if API key is set."""
+        h = {"Content-Type": "application/json"}
+        if self.api_key:
+            h["Authorization"] = f"Bearer {self.api_key}"
+        return h
 
     # ── Health / Info ───────────────────────────────────────
 
     async def health_check(self) -> bool:
         try:
             async with httpx.AsyncClient(timeout=5) as client:
-                resp = await client.get(f"{self.base_url}/v1/models")
+                resp = await client.get(
+                    f"{self.base_url}/v1/models", headers=self._headers()
+                )
                 return resp.status_code == 200
         except Exception:
             return False
@@ -40,7 +51,9 @@ class OllamaService:
     async def list_models(self) -> list[dict]:
         try:
             async with httpx.AsyncClient(timeout=10) as client:
-                resp = await client.get(f"{self.base_url}/v1/models")
+                resp = await client.get(
+                    f"{self.base_url}/v1/models", headers=self._headers()
+                )
                 if resp.status_code == 200:
                     data = resp.json()
                     return data.get("data", [])
@@ -82,6 +95,7 @@ class OllamaService:
                 resp = await client.post(
                     f"{self.base_url}/v1/chat/completions",
                     json=payload,
+                    headers=self._headers(),
                 )
 
                 elapsed = time.time() - start_time
